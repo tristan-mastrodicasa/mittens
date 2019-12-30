@@ -108,7 +108,7 @@ function start() {
 
   // Start by clearing the screen and positioning the cursor on the second line
   // (because the progress bar will be positioned on the first line)
-  write(ansiEscapes.clearScreen + ansiEscapes.cursorTo(0, 9));
+  write(ansiEscapes.clearScreen + ansiEscapes.cursorTo(0, 13));
 
   // Main Game Loop //
   setInterval(
@@ -124,7 +124,11 @@ function start() {
       playBar.update(mittens.needs.play / 100);
       loveBar.update(mittens.needs.love / 100);
       console.log(`\nDays alive ${mittens.daysAlive}\n`);
-      console.log('give [food, water, love, play]');
+      console.log('Commands: give [food, water, love, play]\n');
+
+      console.log('-------------------------------');
+      console.log(`Events: ${mittens.event()}`);
+      console.log('-------------------------------');
 
       // Check if mittens has died //
       Object.keys(mittens.needs).forEach((key) => {
@@ -138,7 +142,7 @@ function start() {
       // Restore the cursor position.
       write(ansiEscapes.cursorRestorePosition);
     },
-    1000,
+    100,
   );
 
 }
