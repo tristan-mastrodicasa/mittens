@@ -1,2 +1,8 @@
-# mittens
- Your digipet, a command line RPG for taking care of pets
+# Mittens
+ Your digipet; a command line RPG game involving you taking care of mittens
+
+## How to run
+
+`npm install`
+
+`npm run build`
