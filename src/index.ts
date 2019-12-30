@@ -142,7 +142,7 @@ function start() {
       // Restore the cursor position.
       write(ansiEscapes.cursorRestorePosition);
     },
-    100,
+    1000,
   );
 
 }
