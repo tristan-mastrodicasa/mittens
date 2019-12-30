@@ -1,0 +1,39 @@
+{
+  "extends": ["./tslint.override.json", "tslint-config-airbnb"],
+  "rules": {
+    "completed-docs": [
+      true,
+      {
+        "enums": true,
+        "methods": true,
+        "interface": true,
+        "functions": true
+      }
+    ],
+    "max-line-length": [
+      false,
+      100
+    ],
+    "variable-name": {
+      "options": [
+        "allow-leading-underscore"
+      ]
+    },
+    "member-ordering": [
+      true,
+      {
+        "order": [
+          "static-field",
+          "instance-field",
+		      "constructor",
+          "static-method",
+          "instance-method"
+        ]
+      }
+    ],
+    "member-access": true,
+    "no-shadowed-variable": false,
+    "interface-name": true,
+    "trailing-comma": [true, {"multiline": "always", "singleline": "never"}]
+  }
+}
